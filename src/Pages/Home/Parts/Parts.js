@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Part from '../Part/Part';
 
 const Parts = () => {
+    const [parts, setParts] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:5000/parts")
+            .then(res => res.json())
+            .then(data => setParts(data))
+    }, [])
+    console.log(parts)
     return (
         <div className='my-6'>
             <div className='w-3/5 mx-auto'>
@@ -12,36 +20,9 @@ const Parts = () => {
                 </div>
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto my-5'>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+                {
+                    parts.map(part => <Part key={part._id} part={part} />)
+                }
             </div>
         </div>
     );

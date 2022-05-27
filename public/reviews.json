@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Nahid Hasan",
+        "image": "https://i.ibb.co/rZtv4Xm/IMG-8561-1-Copy.jpg",
+        "rating": 5,
+        "comment": "Best in the world! Loved It!"
+    },
+    {
+        "name": "Andrew Garfield",
+        "image": "https://i.ibb.co/sJPY2vq/Andrew-Garfield-Getty-Images-1392657079-1280.jpg",
+        "rating": 5,
+        "comment": "The best"
+    },
+    {
+        "name": "Gerard Pique",
+        "image": "https://i.ibb.co/fFCLh0v/images-q-tbn-ANd9-Gc-Qto40orkcl-GXC-t-G1xw-LPprsnox-SROy-HM76g-usqp-CAU.jpg",
+        "rating": 5,
+        "comment": "Highly Recomended."
+    },
+    {
+        "name": "Luis Enrique",
+        "image": "https://i.ibb.co/YyHB1Qy/images-q-tbn-ANd9-Gc-Q-i-Kwb-UE8-Utf-ZNu-ZMWQbbc-XA2p-Tyxzlty-Aig-usqp-CAU.jpg",
+        "rating": 5,
+        "comment": "Loved It."
+    },
+    {
+        "name": "Pep Guardiola",
+        "image": "https://i.ibb.co/g64Jq4Q/Real-Madrid-v-Barcelona-UEFA-Champions-League-q-VLom-Zj-Ldg1m.jpg",
+        "rating": 5,
+        "comment": "The quality is perfect."
+    },
+    {
+        "name": "Lionel Messi",
+        "image": "https://i.ibb.co/Q6ThyDj/FDEdi2-CUUAAc-Ed7.jpg",
+        "rating": 5,
+        "comment": "Lovely quality."
+    }
+]

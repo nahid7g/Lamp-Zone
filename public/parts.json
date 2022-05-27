@@ -1,0 +1,50 @@
+[
+    {
+        "name": "ARMBACKS",
+        "image": "https://cdn11.bigcommerce.com/s-bqp0js5qot/product_images/uploaded_images/armbacks.jpg",
+        "price": 4,
+        "minOrder": 5000,
+        "stock": 120000,
+        "description": "Armbacks for Lamps are fittings that work like elbows,Tees and Couplings. Grandbrass Lamp Parts, carries ball, decorative, disk, square, and straight armbacks in various finishes and styles"
+    },
+    {
+        "name": "ARMS",
+        "image": "https://cdn11.bigcommerce.com/s-bqp0js5qot/product_images/uploaded_images/arms.jpg",
+        "price": 2,
+        "minOrder": 5000,
+        "stock": 80000,
+        "description": "Arms are lamp parts that are used to branch a chandelier or lamp to create extra lighting and create distances in wall sconces or ceiling fixtures."
+    },
+    {
+        "name": "ARMBACKS",
+        "image": "https://cdn11.bigcommerce.com/s-bqp0js5qot/product_images/uploaded_images/armbacks.jpg",
+        "price": 4,
+        "minOrder": 5000,
+        "stock": 120000,
+        "description": "Armbacks for Lamps are fittings that work like elbows,Tees and Couplings. Grandbrass Lamp Parts, carries ball, decorative, disk, square, and straight armbacks in various finishes and styles"
+    },
+    {
+        "name": "BACKPLATES",
+        "image": "https://cdn11.bigcommerce.com/s-bqp0js5qot/product_images/uploaded_images/backplate.jpg",
+        "price": 4,
+        "minOrder": 5000,
+        "stock": 70000,
+        "description": "Back Plates are lamp part plates that protect the wires or configurations of lamps. Back Plate lamp parts include brass back plates, cast brass back plates, embossed brass back plates, and rectangular brass back plates that can be used for Wall Plates or Ceiling Canopies."
+    },
+    {
+        "name": "BALLS",
+        "image": "https://cdn11.bigcommerce.com/s-bqp0js5qot/product_images/uploaded_images/balls.jpg",
+        "price": 2,
+        "minOrder": 5000,
+        "stock": 120000,
+        "description": "Turned, Stamped, Cast, and Spun Balls. Hollow or Solid Balls, Half, Two Piece and, Three piece balls, Ribbed or Smooth Round Balls, made from Brass and Steel in multiple sizes and finishes."
+    },
+    {
+        "name": "BODIES",
+        "image": "https://cdn11.bigcommerce.com/s-bqp0js5qot/product_images/uploaded_images/bodies.jpg",
+        "price": 4,
+        "minOrder": 5000,
+        "stock": 120000,
+        "description": "Bodies for Lamps and Chandeliers. Lamp Bodies are used as a structural and electrical junctions when Building Chandeliers and Lamp Socket Clusters."
+    }
+]
