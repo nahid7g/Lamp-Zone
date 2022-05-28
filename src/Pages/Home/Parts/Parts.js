@@ -3,19 +3,11 @@ import Part from '../Part/Part';
 
 const Parts = () => {
     const [parts, setParts] = useState([]);
-    const [part, setPart] = useState({});
     useEffect(() => {
         fetch("http://localhost:5000/parts")
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])
-    const handleBuyNow = id => {
-        const url = `http://localhost:5000/parts/${id}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setPart(data));
-    }
-    console.log(part);
     return (
         <div className='my-6'>
             <div className='w-3/5 mx-auto'>
@@ -28,7 +20,7 @@ const Parts = () => {
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto my-5'>
                 {
-                    parts.map(part => <Part handleBuyNow={handleBuyNow} key={part._id} part={part} />)
+                    parts.map(part => <Part key={part._id} part={part} />)
                 }
             </div>
         </div>

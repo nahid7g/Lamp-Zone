@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Part = ({ part, handleBuyNow }) => {
+const Part = ({ part }) => {
     const { name, image, minOrder, price, description, _id } = part;
     return (
         <div className="card w-96 bg-base-100 shadow-xl m-2 p-2">
@@ -11,7 +12,7 @@ const Part = ({ part, handleBuyNow }) => {
                 <p>Minimum order: {minOrder}pcs</p>
                 <p>description: {description}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={() => handleBuyNow(_id)} className="btn btn-primary">Buy Now</button>
+                    <Link to={`/parts/${_id}`} className="btn btn-primary">Buy Now</Link>
                 </div>
             </div>
         </div>
