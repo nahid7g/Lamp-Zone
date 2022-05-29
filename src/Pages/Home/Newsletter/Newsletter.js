@@ -9,7 +9,7 @@ const Newsletter = () => {
             name: data.name,
             email: data.email
         }
-        fetch("http://localhost:5000/reviews", {
+        fetch("http://localhost:5000/newsletter", {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ const Newsletter = () => {
             body: JSON.stringify(newsLetter),
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => console.log(data.success))
         reset();
         toast("Submited!")
     };

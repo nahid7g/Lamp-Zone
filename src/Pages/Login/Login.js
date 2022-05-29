@@ -42,7 +42,7 @@ const Login = () => {
                     <h2 className="text-2xl text-center font-bold">Login</h2>
                     <form className='grid grid-cols-1 gap-2' onSubmit={handleSubmit(onSubmit)}>
                         {/* Email  */}
-                        <label htmlFor="email" className='font-bold'>Email</label>
+                        <label htmlhtmlFor="email" className='font-bold'>Email</label>
                         <input id='email' className='input input-bordered w-full max-w-xs' {...register("email", {
                             required: {
                                 value: true,
@@ -60,7 +60,7 @@ const Login = () => {
                             }
                         </label>
                         {/* Password  */}
-                        <label htmlFor="password" className='font-bold'>Password</label>
+                        <label htmlhtmlFor="password" className='font-bold'>Password</label>
                         <input id='password' className='input input-bordered w-full max-w-xs' type="password" {...register("password", {
                             required: {
                                 value: true,

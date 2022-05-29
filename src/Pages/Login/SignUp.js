@@ -39,7 +39,7 @@ const SignUp = () => {
                     <h2 className="text-2xl text-center font-bold">Sign Up</h2>
                     <form className='grid grid-cols-1 gap-2' onSubmit={handleSubmit(onSubmit)}>
                         {/* Name  */}
-                        <label htmlFor="name" className='font-bold'>Your Name</label>
+                        <label htmlhtmlFor="name" className='font-bold'>Your Name</label>
                         <input id='name' className='input input-bordered w-full max-w-xs' {...register("name", {
                             required: {
                                 value: true,
@@ -50,7 +50,7 @@ const SignUp = () => {
                             {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
                         </label>
                         {/* Email  */}
-                        <label htmlFor="email" className='font-bold'>Email</label>
+                        <label htmlhtmlFor="email" className='font-bold'>Email</label>
                         <input id='email' className='input input-bordered w-full max-w-xs' {...register("email", {
                             required: {
                                 value: true,
@@ -68,7 +68,7 @@ const SignUp = () => {
                             }
                         </label>
                         {/* Password  */}
-                        <label htmlFor="password" className='font-bold'>Password</label>
+                        <label htmlhtmlFor="password" className='font-bold'>Password</label>
                         <input id='password' className='input input-bordered w-full max-w-xs' type="password" {...register("password", {
                             required: {
                                 value: true,
