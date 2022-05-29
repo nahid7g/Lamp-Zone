@@ -10,7 +10,6 @@ const Navbar = () => {
         signOut(auth);
     }
     const menuItems = <>
-        <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/appointment">Appointment</Link></li>
         <li><Link to="/reviews">Reviews</Link></li>
@@ -18,9 +17,16 @@ const Navbar = () => {
         {
             gUser || user
                 ?
-                <button className='btn btn-accent' onClick={handleLogout}>Logout</button>
+                (
+                    <>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <button className='btn btn-accent' onClick={handleLogout}>Logout</button>
+                    </>
+                )
                 :
-                <li><Link to="/login">Login</Link></li>
+                (
+                    <li><Link to="/login">Login</Link></li>
+                )
         }
     </>
     return (
