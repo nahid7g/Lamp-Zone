@@ -15,7 +15,6 @@ const AddReview = () => {
             comment: data.comment,
             rating: data.rating
         }
-        console.log(data)
         fetch("http://localhost:5000/reviews", {
             method: 'POST', // or 'PUT'
             headers: {
