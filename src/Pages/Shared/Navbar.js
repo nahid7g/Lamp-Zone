@@ -30,7 +30,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div className="navbar bg-neutral text-neutral-content">
+        <div className="navbar md:bg-neutral md:text-neutral-content">
             <div className='container mx-auto'>
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -47,6 +47,12 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal p-0">
                         {menuItems}
                     </ul>
+                </div>
+                <div className="navbar-end">
+                    <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <span>dashboard</span>
+                    </label>
                 </div>
             </div>
         </div>

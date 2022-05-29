@@ -24,8 +24,8 @@ const Inventory = () => {
         const order = {
             orderId: _id,
             productName: name,
-            image: image,
             price: price,
+            email: user?.email,
             totalOrder: data.totalOrder,
             address: data.address,
             phone: data.phone
