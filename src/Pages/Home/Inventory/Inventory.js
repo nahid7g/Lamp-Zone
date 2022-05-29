@@ -8,8 +8,10 @@ import Loading from '../../Shared/Loading';
 const Inventory = () => {
     const [part, setPart] = useState({});
     const { id } = useParams();
-    const { name, image, price, stock, description, minOrder } = part;
+    const { name, image, price, stock, description, minOrder, _id } = part;
     const [user, loading, gLoading] = useAuthState(auth);
+    const [product, setProduct] = useState({});
+    const [error, setError] = useState("");
     useEffect(() => {
         const url = `http://localhost:5000/parts/${id}`;
         fetch(url)
@@ -18,7 +20,19 @@ const Inventory = () => {
     }, [id]);
     // Handle Form 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        const order = {
+            orderId: _id,
+            productName: name,
+            image: image,
+            price: price,
+            stock: stock,
+            totalOrder: data.totalOrder,
+            address: data.address,
+            phone: data.phone
+        }
+        console.log(order)
+    };
     return (
         <div className="container bg-slate-200 mx-auto my-10 p-10">
             <section>
@@ -48,6 +62,18 @@ const Inventory = () => {
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
+                                        <span class="label-text">Your Order</span>
+                                    </label>
+                                    <input type="text" placeholder='Minimum order must be 5000' class="input input-bordered" required {...register("totalOrder", {
+                                        required: true,
+                                        validate: value => value >= 5000,
+                                        message: "Error"
+
+                                    })} />
+                                    {errors.totalOrder?.type == "validate" && <span className="label-text-alt text-red-500">You can not order less than 5000 items.</span>}
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
                                         <span class="label-text">Your Name</span>
                                     </label>
                                     <input type="text" name="name" defaultValue={user?.displayName || ""} disabled class="input input-bordered" />
@@ -74,7 +100,6 @@ const Inventory = () => {
                                 {/* include validation with required or other standard HTML validation rules */}
                                 {/* errors will return when field validation fails  */}
                                 {errors.exampleRequired && <span>This field is required</span>}
-
                                 <input type="submit" className='btn btn-primary my-2' />
                             </form>
                         </div>
