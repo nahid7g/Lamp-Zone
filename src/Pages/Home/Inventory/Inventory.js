@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading';
 
@@ -10,8 +11,6 @@ const Inventory = () => {
     const { id } = useParams();
     const { name, image, price, stock, description, minOrder, _id } = part;
     const [user, loading, gLoading] = useAuthState(auth);
-    const [product, setProduct] = useState({});
-    const [error, setError] = useState("");
     useEffect(() => {
         const url = `http://localhost:5000/parts/${id}`;
         fetch(url)
@@ -19,19 +18,29 @@ const Inventory = () => {
             .then(data => setPart(data));
     }, [id]);
     // Handle Form 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         const order = {
             orderId: _id,
             productName: name,
             image: image,
             price: price,
-            stock: stock,
             totalOrder: data.totalOrder,
             address: data.address,
             phone: data.phone
         }
         console.log(order)
+        fetch("http://localhost:5000/orders", {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(order),
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+        reset();
+        toast("Your order will be sent to your address within 3-5 business days.")
     };
     return (
         <div className="container bg-slate-200 mx-auto my-10 p-10">
@@ -100,7 +109,7 @@ const Inventory = () => {
                                 {/* include validation with required or other standard HTML validation rules */}
                                 {/* errors will return when field validation fails  */}
                                 {errors.exampleRequired && <span>This field is required</span>}
-                                <input type="submit" className='btn btn-primary my-2' />
+                                <button type="submit" className='btn btn-primary my-2'>Buy Now</button>
                             </form>
                         </div>
                     </div>
