@@ -8,11 +8,7 @@ const Review = ({ review }) => {
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <div className="rating">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                    <p>Rating: {rating}</p>
                 </div>
                 <p>{comment}</p>
             </div>

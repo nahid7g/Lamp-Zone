@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Review from '../Review/Review';
 
-const Reviews = () => {
+const AllReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch("https://lamp-zone1.herokuapp.com/eight-reviews")
+        fetch("https://lamp-zone1.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
     return (
-        <div className='my-10'>
+        <div className='my-6'>
             <div className='w-3/5 mx-auto'>
                 <h1 className='text-4xl text-teal-900 text-center my-3' style={{ color: "#bc9f4c" }}>REVIEWS</h1>
             </div>
@@ -19,11 +18,8 @@ const Reviews = () => {
                     reviews.map(review => <Review key={review._id} review={review} />)
                 }
             </div>
-            <div className='flex justify-center'>
-                <Link to="/reviews" className='btn btn-link'>See All Reviews</Link>
-            </div>
         </div>
     );
 };
 
-export default Reviews;
+export default AllReviews;
