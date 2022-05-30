@@ -7,7 +7,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth)
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
+        fetch(`https://lamp-zone1.herokuapp.com/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [orders]);
@@ -24,6 +24,7 @@ const Orders = () => {
                             <th>Address</th>
                             <th>Phone</th>
                             <th>Quantity</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -9,7 +9,7 @@ const Newsletter = () => {
             name: data.name,
             email: data.email
         }
-        fetch("http://localhost:5000/newsletter", {
+        fetch("https://lamp-zone1.herokuapp.com/newsletter", {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

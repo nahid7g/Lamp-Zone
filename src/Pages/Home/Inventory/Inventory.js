@@ -13,7 +13,7 @@ const Inventory = () => {
     const { name, image, price, stock, description, minOrder, _id } = part;
     const [user, loading, gLoading] = useAuthState(auth);
     useEffect(() => {
-        const url = `http://localhost:5000/parts/${id}`;
+        const url = `https://lamp-zone1.herokuapp.com/parts/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setPart(data));
@@ -30,7 +30,7 @@ const Inventory = () => {
             address: data.address,
             phone: data.phone
         }
-        fetch("http://localhost:5000/orders", {
+        fetch("https://lamp-zone1.herokuapp.com/orders", {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

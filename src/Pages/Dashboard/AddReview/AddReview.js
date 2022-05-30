@@ -15,7 +15,7 @@ const AddReview = () => {
             comment: data.comment,
             rating: data.rating
         }
-        fetch("http://localhost:5000/reviews", {
+        fetch("https://lamp-zone1.herokuapp.com/reviews", {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

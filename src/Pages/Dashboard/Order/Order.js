@@ -10,7 +10,7 @@ const Order = ({ order }) => {
             <td>{address}</td>
             <td>{phone}</td>
             <td>{totalOrder}</td>
-            <button className='btn btn-primary'>Make Payment</button>
+            <button className='btn btn-ghost'>Make Payment</button>
         </tr>
     );
 };
