@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Part = ({ part }) => {
     const { name, image, minOrder, price, description, _id, stock } = part;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl m-2 p-2">
+        <div className="card w-96 bg-base-100 shadow-xl mx-auto my-2 p-2">
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
