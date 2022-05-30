@@ -17,6 +17,7 @@ import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import AllReviews from './Pages/Home/AllReviews/AllReviews';
 import About from './Pages/About/About';
 import Portfolio from './Pages/Portfolio/Portfolio';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         } />
         <Route path="/reviews" element={<AllReviews />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

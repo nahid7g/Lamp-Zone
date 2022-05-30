@@ -28,26 +28,26 @@ const AddReview = () => {
         toast("Submited!")
     };
     return (
-        <div class="hero min-h-screen bg-base-200 mt-5 mb-10">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-                <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">Write about our product.</h1>
-                    <p class="py-6">We would love to read your reviews and experiences about our products.</p>
+        <div className="hero min-h-screen bg-base-200 mt-5 mb-10">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="text-center lg:text-left">
+                    <h1 className="text-5xl font-bold">Write about our product.</h1>
+                    <p className="py-6">We would love to read your reviews and experiences about our products.</p>
                 </div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div class="card-body">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card-body">
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Your Review</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Your Review</span>
                                 </label>
-                                <textarea class="textarea textarea-accent" placeholder="Review" {...register("comment")} ></textarea>
+                                <textarea className="textarea textarea-accent" placeholder="Review" {...register("comment")} ></textarea>
                             </div>
                             <div className="form-control">
                                 <label className='label'>
                                     <span className="label-text">Your Rating</span>
                                 </label>
-                                <select {...register("rating")} class="select select-primary w-full max-w-xs">
+                                <select {...register("rating")} className="select select-primary w-full max-w-xs">
                                     <option value={1}>1</option>
                                     <option value={2}>2</option>
                                     <option value={3}>3</option>
