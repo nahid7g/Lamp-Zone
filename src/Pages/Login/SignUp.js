@@ -19,10 +19,8 @@ const SignUp = () => {
     }
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = async data => {
-        console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        console.log("update done");
         reset();
     };
     let loginError;

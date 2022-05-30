@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../../Shared/Loading';
 import Review from '../Review/Review';
 
 const Reviews = () => {
@@ -9,6 +10,9 @@ const Reviews = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
+    if (reviews.length === 0) {
+        return <Loading />
+    }
     return (
         <div className='my-10'>
             <div className='w-3/5 mx-auto'>

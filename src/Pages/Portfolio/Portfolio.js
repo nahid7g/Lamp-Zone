@@ -9,7 +9,7 @@ const Portfolio = () => {
                     <h2 className="card-title">
                         Name: Nahid Hasan
                     </h2>
-                    <p>Email: nahidhasankiran2@gmail.com</p>
+                    <p>Email: nahidhasan2g@gmail.com</p>
                     <p>Highest education: HSC</p>
                     <div>
                         <p className='text-xl font-bold'>Three live sites link:</p>

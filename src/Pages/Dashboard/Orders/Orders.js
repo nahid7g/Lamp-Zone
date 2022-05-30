@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading';
 import Order from '../Order/Order';
 
 const Orders = () => {
@@ -10,7 +11,10 @@ const Orders = () => {
         fetch(`https://lamp-zone1.herokuapp.com/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [orders]);
+    }, [user?.email]);
+    if (orders.length === 0) {
+        return <Loading />
+    }
     return (
         <div>
             <h2 className='my-2'>Your Orders: {orders.length}</h2>
