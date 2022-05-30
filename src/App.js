@@ -14,10 +14,10 @@ import RequireAuth from './Pages/Login/RequireAuth';
 import Orders from './Pages/Dashboard/Orders/Orders';
 import AddReview from './Pages/Dashboard/AddReview/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
-import AllReviews from './Pages/Home/AllReviews/AllReviews';
 import About from './Pages/About/About';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import Blogs from './Pages/Blogs/Blogs';
+import Reviews from './Pages/Home/Reviews/Reviews';
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
             <Inventory />
           </RequireAuth>
         } />
-        <Route path="/reviews" element={<AllReviews />} />
+        <Route path="/reviews" element={<Reviews />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />

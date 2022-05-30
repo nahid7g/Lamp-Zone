@@ -5,7 +5,7 @@ import Review from '../Review/Review';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch("https://lamp-zone1.herokuapp.com/eight-reviews")
+        fetch("https://lamp-zone1.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -18,9 +18,6 @@ const Reviews = () => {
                 {
                     reviews.map(review => <Review key={review._id} review={review} />)
                 }
-            </div>
-            <div className='flex justify-center'>
-                <Link to="/reviews" className='btn btn-link'>See All Reviews</Link>
             </div>
         </div>
     );
