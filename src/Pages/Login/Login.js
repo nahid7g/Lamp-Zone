@@ -78,7 +78,7 @@ const Login = () => {
                         {loginError}
                         <button className="btn btn-accent text-white" type='submit'>Login</button>
                     </form>
-                    <p>New to Doctors Portal? <Link className='text-primary' to="/signup">Sign Up</Link></p>
+                    <p>New to Lamp Zone? <Link className='text-primary' to="/signup">Sign Up</Link></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
