@@ -14,7 +14,7 @@ We are one of the most popular lamp manufacturer in the world. We have been work
 * Daisy Ui
 * Tailwind Css
 * Firebase
-* Heroku
+* Vercel
 
 ### What we do?
 We innovate unique and strong Lapm Parts. We export our products in almost 50+ countries. We have more than 30000+ Employees in the world. in 2021 our Annual revinue was almost $5bn.
