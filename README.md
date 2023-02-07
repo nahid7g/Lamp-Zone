@@ -1,6 +1,6 @@
 # LEARN ABOUT OUR WEBSITE
 
-Visit our website [Lapm Zone](https://lamp-zone.web.app/).
+Visit our website [Lapm Zone](https://lamp-zone-2a9f0.web.app/).
 
 ## About Our Website
 We are one of the most popular lamp manufacturer in the world. We have been working proudly for almost 32 years.
