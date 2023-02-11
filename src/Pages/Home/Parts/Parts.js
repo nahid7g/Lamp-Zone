@@ -26,15 +26,12 @@ const Parts = () => {
           </p>
         </div>
       </div>
-      {parts.length === 0 ? (
-        <Loading />
-      ) : (
-        <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 lg:grid-cols-3 container mx-auto my-5'>
-          {parts.map((part) => (
-            <Part key={part._id} part={part} />
-          ))}
-        </div>
-      )}
+      {parts.length === 0 && <Loading />}
+      <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 lg:grid-cols-3 container mx-auto my-5'>
+        {parts.map((part) => (
+          <Part key={part._id} part={part} />
+        ))}
+      </div>
     </div>
   )
 }

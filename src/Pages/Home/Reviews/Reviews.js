@@ -9,9 +9,6 @@ const Reviews = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data))
   }, [])
-  if (reviews.length === 0) {
-    return <Loading />
-  }
   return (
     <div className='my-10'>
       <div className='w-3/5 mx-auto'>
@@ -22,6 +19,7 @@ const Reviews = () => {
           REVIEWS
         </h1>
       </div>
+      {reviews.length === 0 && <Loading />}
       <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 container mx-auto my-5'>
         {reviews.map((review) => (
           <Review key={review._id} review={review} />
