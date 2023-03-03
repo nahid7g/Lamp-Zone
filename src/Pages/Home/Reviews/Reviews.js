@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import Loading from '../../Shared/Loading'
 import Review from '../Review/Review'
@@ -5,9 +6,9 @@ import Review from '../Review/Review'
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
   useEffect(() => {
-    fetch('https://lamp-zone-server.vercel.app/reviews')
-      .then((res) => res.json())
-      .then((data) => setReviews(data))
+    axios
+      .get('https://lamp-zone-server.vercel.app/reviews')
+      .then((res) => setReviews(res.data))
   }, [])
   return (
     <div className='my-10'>

@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Loading from '../../Shared/Loading'
 import Part from '../Part/Part'
@@ -5,9 +6,9 @@ import Part from '../Part/Part'
 const Parts = () => {
   const [parts, setParts] = useState([])
   useEffect(() => {
-    fetch('https://lamp-zone-server.vercel.app/parts')
-      .then((res) => res.json())
-      .then((data) => setParts(data))
+    axios
+      .get('https://lamp-zone-server.vercel.app/parts')
+      .then((res) => setParts(res.data))
   }, [])
   return (
     <div className='my-6'>
