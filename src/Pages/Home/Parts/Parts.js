@@ -6,9 +6,12 @@ import Part from '../Part/Part'
 const Parts = () => {
   const [parts, setParts] = useState([])
   useEffect(() => {
-    axios
+    const fetchParts = async() => {
+      await axios
       .get('https://lamp-zone-server.vercel.app/parts')
       .then((res) => setParts(res.data))
+    }
+    fetchParts()
   }, [])
   return (
     <div className='my-6'>

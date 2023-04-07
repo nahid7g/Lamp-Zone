@@ -6,9 +6,12 @@ import Review from '../Review/Review'
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
   useEffect(() => {
-    axios
+    const fetchReviews = async() => {
+      await axios
       .get('https://lamp-zone-server.vercel.app/reviews')
       .then((res) => setReviews(res.data))
+    }
+    fetchReviews()
   }, [])
   return (
     <div className='my-10'>
