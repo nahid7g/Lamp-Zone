@@ -5,14 +5,17 @@ import Review from '../Review/Review'
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
-  useEffect(() => {
+  const [error,setError] = useState("")
     const fetchReviews = async() => {
-      await axios
+      try{
+        const {data} = await axios
       .get('https://lamp-zone-server.vercel.app/reviews')
-      .then((res) => setReviews(res.data))
+      setReviews(data)
+      }catch(error) {
+        setError("Something went wrong")
+      }
     }
     fetchReviews()
-  }, [])
   return (
     <div className='my-10'>
       <div className='w-3/5 mx-auto'>

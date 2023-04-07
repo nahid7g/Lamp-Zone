@@ -5,11 +5,17 @@ import Part from '../Part/Part'
 
 const Parts = () => {
   const [parts, setParts] = useState([])
+  const [error,setError] = useState("")
   useEffect(() => {
     const fetchParts = async() => {
-      await axios
+     try{
+        const {data} = await axios
       .get('https://lamp-zone-server.vercel.app/parts')
-      .then((res) => setParts(res.data))
+      setParts(data)
+      }catch(error) {
+        setError("Something went wrong")
+      }
+
     }
     fetchParts()
   }, [])
